@@ -9,7 +9,7 @@ export class BasePage {
 
   async goto(path = '/') {
     await this.page.goto(path)
-    await this.page.waitForLoadState('networkidle')
+    await this.page.waitForLoadState('load')
   }
 
   async getTitle() {
