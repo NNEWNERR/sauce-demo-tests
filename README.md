@@ -1,6 +1,6 @@
 # sauce-demo-tests
 
-[![Playwright Tests](https://github.com/USERNAME/sauce-demo-tests/actions/workflows/playwright.yml/badge.svg)](https://github.com/USERNAME/sauce-demo-tests/actions)
+[![Playwright Tests](https://github.com/NNEWNERR/sauce-demo-tests/actions/workflows/playwright.yml/badge.svg)](https://github.com/NNEWNERR/sauce-demo-tests/actions)
 
 ## Stack
 - **Playwright** + **TypeScript** — E2E automation
