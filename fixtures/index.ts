@@ -1,8 +1,8 @@
-import { test as base, expect } from '@playwright/test'
+import { test as base } from '@playwright/test'
 import { LoginPage } from '../pages/LoginPage'
-import { InventoryPage } from 'pages/InventoryPage'
-import { CartPage } from 'pages/CartPage'
-import { CheckoutPage } from 'pages/CheckoutPage'
+import { InventoryPage } from '../pages/InventoryPage'
+import { CartPage } from '../pages/CartPage'
+import { CheckoutPage } from '../pages/CheckoutPage'
 
 type Fixtures = {
   loginPage: LoginPage

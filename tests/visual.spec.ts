@@ -1,7 +1,13 @@
 import { test, expect } from '../fixtures'
 import { InventoryPage } from '../pages/InventoryPage'
 
-test.describe('Visual regression', () => {
+/**
+ * Screenshot baselines are OS-specific — Playwright suffixes them (-win32) and
+ * font rasterisation differs on the Linux CI runner, so CI skips this suite via
+ * `--grep-invert @visual`. Regenerate with `npm run test:update-snapshots`
+ * after a browser upgrade.
+ */
+test.describe('Visual regression', { tag: '@visual' }, () => {
 
   test('login page matches baseline', async ({ loginPage }) => {
     await expect(loginPage.page).toHaveScreenshot('login-page.png', {

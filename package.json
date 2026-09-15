@@ -1,18 +1,25 @@
 {
   "name": "sauce-demo-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright + TypeScript E2E suite for the Sauce Labs demo shop — POM, visual regression, accessibility, CI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:ci": "playwright test --grep-invert @visual",
+    "test:headed": "playwright test --headed --grep-invert @visual",
+    "test:visual": "playwright test --grep @visual",
+    "test:update-snapshots": "playwright test --grep @visual --update-snapshots",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
   },
   "keywords": [],
-  "author": "",
+  "author": "Supakorn (NNEWNERR)",
   "license": "ISC",
   "devDependencies": {
     "@axe-core/playwright": "^4.11.2",
     "@faker-js/faker": "^10.4.0",
     "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
     "typescript": "^6.0.3"
   }
 }

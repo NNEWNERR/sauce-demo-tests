@@ -1,6 +1,15 @@
+# Auth state captured by global.setup.ts — real session cookies, never commit
 auth/
+
+# Node
 node_modules/
+
+# Playwright
 test-results/
 playwright-report/
-auth/
+
+# Archives
 *.zip
+
+# Claude Code local overrides (machine-specific)
+.claude/settings.local.json
