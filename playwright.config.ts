@@ -8,7 +8,12 @@ export default defineConfig({
     forbidOnly: isCI,
     retries: isCI ? 2 : 1,
     workers: isCI ? '50%' : undefined,
-    reporter: [['html', { open: 'never' }], [isCI ? 'github' : 'list']],
+    reporter: [
+        ['html', { open: 'never' }],
+        [isCI ? 'github' : 'list'],
+        // CI publishes these totals to the portfolio site (scripts/publish-test-stats.mjs)
+        ...(isCI ? [['json', { outputFile: 'results.json' }] as const] : []),
+    ],
     globalSetup: './global.setup.ts',
     use: {
         baseURL: 'https://www.saucedemo.com',
